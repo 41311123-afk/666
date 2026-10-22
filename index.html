@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>校園生活好物誌 - 宿舍電器合規推薦</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- 頂部新生指南 Header -->
+    <header class="site-header">
+      <div class="container">
+        <span class="header-badge">🎓 2026 大一住宿新生專屬</span>
+        <h1 class="site-title">🎒 校園生活好物誌 - 宿舍電器指南</h1>
+        <p class="site-subtitle">
+          搞懂宿舍限電與生活痛點，為你精選低瓦數防跳電、安靜不吵室友、省空間好收納的必備生活電器。
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- 篩選控制器 Panel -->
+      <section class="filter-panel" aria-label="商品篩選">
+        <!-- 1. 入學急迫性 Tabs -->
+        <div class="filter-section">
+          <label class="section-label">📍 入學使用情境（急迫性）</label>
+          <div class="tabs-group" id="urgency-tabs">
+            <button class="tab-btn active" data-urgency="first_night">
+              🛌 第一晚沒它不能睡
+            </button>
+            <button class="tab-btn" data-urgency="first_week">
+              📚 開學首週再補買
+            </button>
+            <button class="tab-btn" data-urgency="all">
+              🌐 全部宿舍商品
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. 功能痛點標籤 Pills -->
+        <div class="filter-section">
+          <label class="section-label">💡 宿舍痛點偏好（可複選）</label>
+          <div class="pills-group" id="feature-pills">
+            <label>
+              <input type="checkbox" class="pill-checkbox" value="quiet" />
+              <span class="pill-label">🔊 超靜音（半夜不吵室友）</span>
+            </label>
+            <label>
+              <input type="checkbox" class="pill-checkbox" value="low_watt" />
+              <span class="pill-label">⚡ 宿舍低瓦數（合規防跳電）</span>
+            </label>
+            <label>
+              <input type="checkbox" class="pill-checkbox" value="foldable" />
+              <span class="pill-label">📦 可折疊（小空間好收納）</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- 3. 搜尋與排序工具列 -->
+        <div class="filter-section">
+          <div class="tools-row">
+            <input
+              type="text"
+              id="search-input"
+              class="search-input"
+              placeholder="🔍 搜尋電器名稱、推薦理由..."
+            />
+            <select id="sort-select" class="sort-select" aria-label="排序依據">
+              <option value="price_asc">💰 價格：由低到高 (便宜優先)</option>
+              <option value="price_desc">💎 價格：由高到低</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- 主要佈局：商品 Grid + 採購清單 -->
+      <div class="main-layout">
+        <!-- 商品推薦卡片網格 -->
+        <section aria-label="推薦商品列表">
+          <div id="product-grid" class="product-grid">
+            <!-- 由 render.js 動態渲染 -->
+          </div>
+        </section>
+
+        <!-- 側邊開學採購清單 -->
+        <aside class="checklist-card" aria-label="開學採購清單">
+          <div class="checklist-header">
+            <h2 class="checklist-title">📋 我的開學採購清單</h2>
+          </div>
+          <div id="checklist-container">
+            <!-- 由 render.js 動態渲染 -->
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
